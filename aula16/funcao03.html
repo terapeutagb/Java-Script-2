@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçaõ par ou ímpar</title>
+</head>
+<body>
+    <h1>Função PAR e ÍMPAR</h1>
+    Esse número é : <input type="number" name="txpi" id="txpi">
+    <input type="button" value="Informar" onmouseenter="parimp()">
+    <div id="res">
+
+    </div>
+    <script>
+        function  parimp() {
+            let txti = document.querySelector(`input#txpi`)
+            let res = document.querySelector(`div#res`)
+            let pi = (txti.value)
+            res.innerHTML = `Vc digitou ${pi}, por isoo seu número é `
+            if(pi % 2 == 0) {
+                res.innerHTML += `Número Par`
+            } else {
+                res.innerHTML += `Número Ímpar`
+            }
+}
+    </script>
+</body>
+</html>

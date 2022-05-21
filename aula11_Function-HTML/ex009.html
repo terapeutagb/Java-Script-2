@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Qual é a sua Nacionalidade</h1>
+   Nasceu em : <input name="txnacio" id="txnacio"> país.
+   <input type="button" value="verficar" onclick="nac()">
+   <div id="res"></div>
+   <script>
+       function nac() {
+           let sou = document.querySelector(`input#txnacio`)
+           let res = document.querySelector(`div#res`)
+           let contin = (sou.value)
+           res.innerHTML = `sou assim é do  ${contin} , com sso, sou brasileiro mesmo morando fora ..`
+           if (contin == `brasil`) {
+               res.innerHTML += `<p>Sou Brasileiro</p>`
+           } else {
+               res.innerHTML += `<p>Sou Estrangeiro</p>`
+           }
+       }
+   </script>
+</body>
+</html>

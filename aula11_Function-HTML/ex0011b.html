@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Natural de</h1>
+    Vc nasceu em: <input name="txtnasc" id="txtnasc"> , por isso vc é Patriota.
+    <input type="button" value="Apertar" onclick="clicar()">
+    <div id="res">Resultado</div>
+    <script>
+        function clicar() {
+            let onde = document.querySelector(`input#txtnasc`)
+            let deon = document.querySelector(`div#res`)
+            let fim = (onde.value)
+            deon.innerHTML = `Chegamos no máximo, e sendo o ${fim}`
+        
+        if (fim != `Brasil`) {
+            deon.innerHTML += `<h1>Sou estrangeiro!</h1>`
+        } else {
+            deon.innerHTML += `<p>Sou Brasileiro....</p>`
+        }
+    }
+    </script>
+</body>
+</html>
